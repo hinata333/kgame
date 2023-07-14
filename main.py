@@ -63,9 +63,9 @@ morse_code1_2 = ''.join(morse_code1_2)
 
 st.write('    ')
 if st.button('採点'):
-    st.write(f'# 「　　　a = :red[{morse_code1_1}]　　　　」')
-    st.write(f'# 「　　　b = :red[{morse_code1_2}]　　　　」')
-    st.write(f'#  　　　　Key： ab　　　　　')
+    st.write(f'# 「　a = :red[{morse_code1_1}]　」')
+    st.write(f'# 「　b = :red[{morse_code1_2}]　」')
+    st.write(f'#  　　　Key： ab')
 
 
 
@@ -117,8 +117,8 @@ morse_code_2 = ''.join(morse_code_2)
 
 st.write('    ')
 if st.button('採点 '):
-    st.write(f'# 「　　　c = :red[{morse_code_2}]　　　　」')
-    st.write(f'#  　　　　Key： c　　　　　')
+    st.write(f'# 「　c = :red[{morse_code_2}]　」')
+    st.write(f'#  　　　Key： c　')
 
 
 st.write('-'*60)
@@ -170,8 +170,8 @@ morse_code_3 = ''.join(morse_code_3)
 
 st.write('    ')
 if st.button('採点  '):
-    st.write(f'# 「　　　d = :red[{morse_code_3}]　　　　」')
-    st.write(f'#  　　　　Key： d　　　　　')
+    st.write(f'# 「　d = :red[{morse_code_3}]　」')
+    st.write(f'#  　　　Key： d　')
 
 
 
@@ -181,11 +181,11 @@ st.write('-'*60)
 # 4(4) 6(110) 9(11)
 ##################################################################
 code = st.button('Code')
-st.write(f'#   　　「　4　→　ab　→　◯ 　」　')
-st.write(f'#   　　「　1000　→　c　→　×　」　')
-st.write(f'#   　　「　110　→　c　→　△　」　')
-st.write(f'#   　　「　11　→　d　→　□ 　」　')
-st.write(f'#   :red[　　　※Password: ◯×△□　]')
+st.write(f'##   「　4　→　ab　→　◯　」')
+st.write(f'##   「　1000　→　c　→　×　」')
+st.write(f'##   「　110　→　c　→　△　」')
+st.write(f'##   「　11　→　d　→　□ 　」')
+st.write(f'##   :red[　※Password: ◯×△□　]')
 
 st.write('    ')
 st.write('    ')
@@ -219,13 +219,12 @@ if int(select_number) == 4869:
 
     st.write('    ')
     st.write('    ')
-    l_1, l_2, l_3, l_4 = st.columns(4)
-    with l_1: final_q = st.button('Final Question')
-    with l_4: last_btn = st.button('※最後にClick!')
+    final_q = st.button('Final Question')
+    # last_btn = st.button('※最後にClick!')
 
     image = Image.open('table.png')
-    if last_btn:
-      image = Image.open('table_2.png')
+    # if last_btn:
+    #   image = Image.open('table_2.png')
     st.image(image, caption='金庫の暗証番号を示しています。')
 
     hint = st.button('Open Hint ')
@@ -241,9 +240,9 @@ if int(select_number) == 4869:
     st.write('    ')
     st.write('    ')
     st.write('    ')
-    # last_btn = st.button('※最後に押してね！')
-    # if last_btn:
-    #   image_2 = Image.open('table_2.png')
-    #   st.image(image_2, caption='')
+    last_btn = st.button('※最後に押してね！')
+    if last_btn:
+      image_2 = Image.open('table_2.png')
+      st.image(image_2, caption='')
 
 
